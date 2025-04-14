@@ -1,0 +1,8 @@
+{
+    "ENABLE_LOGFILE": true,
+    "DEFAULT_LOCATION": "Automatic",
+    "KNOWN_LOCATIONS": [
+        {"ssid": "My-home-WIFI", "location": "Home"},
+        {"ssid": "My-Work-WIFI", "location": "Work"}
+    ]
+}

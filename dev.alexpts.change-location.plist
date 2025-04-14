@@ -1,0 +1,15 @@
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>dev.alexpts.change-location</string>
+    <key>Program</key>
+    <string>/Users/alex/Scripts/location-wifi-change/changeLocation.sh</string>
+    <key>WatchPaths</key>
+    <array>
+        <string>/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist</string>
+        <string>/Library/Preferences/SystemConfiguration/com.apple.wifi.message-tracer.plist</string>
+        <string>/Library/Preferences/SystemConfiguration/preferences.plist</string>
+        <string>/private/var/run/resolv.conf</string>
+    </array>
+</dict>
+</plist>
