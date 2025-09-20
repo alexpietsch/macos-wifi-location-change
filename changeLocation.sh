@@ -13,7 +13,7 @@ KNOWN_LOCATIONS=$(jq -c '.KNOWN_LOCATIONS[]' "$CONFIG_FILE")
 DEFAULT_LOCATION=$(jq -r '.DEFAULT_LOCATION' "$CONFIG_FILE")
 
 if [[ "$ENABLE_LOGS" == true ]]; then
-    exec >> "$LOGFILE" 2>&1
+    exec > >(while IFS= read -r line; do echo "[$(date '+%Y-%m-%d %H:%M:%S')] $line"; done >> "$LOGFILE") 2>&1
 fi
 
 echo "Script started at $(date)"
