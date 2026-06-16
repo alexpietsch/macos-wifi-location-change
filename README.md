@@ -26,6 +26,9 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/dev.alexpts.change-locat
 
 ## Config
 - Logging can be disabled by setting `ENABLE_LOGFILE` to false in `config.json`.
+- Each entry in `KNOWN_LOCATIONS` requires `ssid` and `location`. You can optionally add `gateway` (the default-route gateway IP) so the correct location is applied when using Ethernet without Wi-Fi.
+- You can optionally add `dns` (for example `["192.168.2.179"]`) to override which DNS servers are applied. If omitted, the script copies DNS from whichever network service already has servers configured in that location (usually Wi-Fi) and applies them to all services, including Ethernet.
+- macOS stores DNS per network service in each location. If only Wi-Fi has custom DNS configured in a location, Ethernet will keep using DHCP DNS unless the script applies the same servers to the Ethernet service.
 - The default location on MacOS should be "Automatic", and is not depending on your OS language. If your's is different, you can change it via `DEFAULT_LOCATION` in `config.json`. You can check your locations by running:
 
 ```zsh

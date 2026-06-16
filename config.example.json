@@ -2,7 +2,7 @@
     "ENABLE_LOGFILE": true,
     "DEFAULT_LOCATION": "Automatic",
     "KNOWN_LOCATIONS": [
-        {"ssid": "My-home-WIFI", "location": "Home"},
+        {"ssid": "My-home-WIFI", "location": "Home", "gateway": "192.168.1.1", "dns": ["192.168.1.53"]},
         {"ssid": "My-Work-WIFI", "location": "Work"}
     ]
 }
